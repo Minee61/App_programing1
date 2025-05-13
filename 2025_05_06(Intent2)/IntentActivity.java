@@ -43,6 +43,9 @@ public class IntentActivity extends AppCompatActivity {
         if (view.getId() == R.id.btn_call) {
             intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:010-1234-5678"));
         }
+        if(intent!=null){
+            startActivity(intent);
+        }
 
     }
 }
