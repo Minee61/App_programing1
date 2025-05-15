@@ -42,5 +42,13 @@
             android:layout_height="wrap_content"
             android:text="연락처보기"
             android:onClick="onClicked_intent"/>
+
+        <Button
+            android:id="@+id/btn_memo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="메모"
+            android:onClick="onClicked_intent"/>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

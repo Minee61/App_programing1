@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -18,7 +19,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class IntentActivity extends AppCompatActivity {
 
-    private static final int SPLASH_TIMEOUT = 2000;
+    String msg = "Tag: ";
     LinearLayout layout;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,12 @@ public class IntentActivity extends AppCompatActivity {
         if (view.getId() == R.id.btn_call) {
             intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:010-1234-5678"));
         }
+
+        if (view.getId() == R.id.btn_memo) {
+            intent = new Intent(IntentActivity.this, MemoActivity.class);
+            Log.d(msg, "메모버튼");
+        }
+
         if(intent!=null){
             startActivity(intent);
         }
